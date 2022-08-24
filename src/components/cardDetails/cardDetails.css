@@ -1,0 +1,18 @@
+.card-details {
+    margin: 3rem;
+}
+
+.card-details__img {
+    opacity: 0.8;
+}
+
+.card-details__title {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.card-details__overview {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding: 1.5rem;
+}

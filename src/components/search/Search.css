@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+:root {
+    --accent-color: #687e81;
+}
+
+/* body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+} */
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid var(--accent-color);
+  border-right: none;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: var(--accent-color);
+}
+
+.searchButton {
+  width: 40px;
+  height: 50px;
+  border: 1px solid var(--accent-color);
+  background: var(--accent-color);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    
+    width: 30%;
+    margin: 0 auto;
+}
+
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
