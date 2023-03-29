@@ -31,7 +31,7 @@
 }
 
 .searchButton {
-  width: 40px;
+  width: fit-content;
   height: 50px;
   border: 1px solid var(--accent-color);
   background: var(--accent-color);
@@ -40,12 +40,23 @@
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }
 
+.search-icon {
+  height: 32px;
+}
+
+.search-icon svg {
+  height: 90%;
+  width: 90%;
+}
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-    
+
     width: 30%;
     margin: 0 auto;
 }
@@ -54,6 +65,3 @@
     display: flex;
     flex-wrap: wrap;
 }
-
-
-

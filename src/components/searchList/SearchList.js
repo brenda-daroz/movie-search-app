@@ -18,7 +18,6 @@ function SearchList({ filteredMovies }) {
     return (
         <>
             <div className="filtered-movies">{filtered.slice(0, count)}</div>
-            {/* <button className="seeMore-button" >See more</button> */}
             <div class="btn-container">
                 <div class="center">
                     <button class="btn" onClick={addMore}>
