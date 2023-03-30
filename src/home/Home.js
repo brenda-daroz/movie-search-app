@@ -1,25 +1,51 @@
 
 import Search from "../components/search/Search"
 import { useState, useEffect } from 'react'
+import axios from 'axios';
 
 
 function Home() {
 
+
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`)
-      .then((response) => response.json())
-      .then(data => {
-        console.log(data.results)
-        setMovies(data.results)
-      })
-  }, [])
+  const fetchMovies = async () => {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query="avatar"`
+    );
+    setMovies(data.results);
+  };
+  fetchMovies();
+}, []);
+
 
   return (
-    <Search details={movies} />
+    <Search movies={movies} />
   )
 
 }
 
 export default Home
+
+
+
+
+
+//   const handleInputChange = e => {
+//     setQuery(e.target.value);
+//   };
+
+//   return (
+//     <div>
+//       <input type="text" value={query} onChange={handleInputChange} />
+//       <ul>
+//         {movies.map(movie => (
+//           <li key={movie.id}>{movie.title}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default MovieList;
